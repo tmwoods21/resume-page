@@ -1,0 +1,103 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+main {
+    background-color:rgb(250, 178, 215);
+    padding: 4px;
+    color: black;
+    grid-area: main;
+}
+
+aside{
+    grid-area: aside;
+}
+
+h1, h2 {
+    color: rgb(255, 93, 177);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#headshot {
+    border-color: 50px black;
+    padding: 2px 1px; /* 2 is top/bottom 8 is left/right */
+    margin: 8px;
+    border-radius: 15px;
+}
+/* # -> id . -> class */
+
+.experience {
+    border: inset 1px;
+    margin-bottom: 4px;
+    padding: 4px;
+    background-color: white;
+    color: black;
+}
+
+.experience .title {
+    font-weight: bold;
+
+}
+
+footer {
+    background-color: pink;
+    color: white;
+    text-align: center;
+    padding: 2px;
+    position:fixed;
+    bottom: 0px;
+    width: 100%;
+    left: 0;
+    grid-area: footer;
+}
+
+#menu li {
+    display: inline;
+    padding: 8px;
+    background-color: pink;
+}
+
+#menu li a {
+    color: white !important; 
+    text-decoration: none;
+}
+
+#menu li.active {
+    background-color: rgb(255, 93, 177);
+}
+
+#menu {
+    float: right;
+}
+
+header {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    grid-area: header;
+}
+
+header #menu {
+    margin-left: auto;
+
+}
+
+/*header #headshot, header #siteName, header #menu {
+    display: inline;
+    vertical-align: middle;
+
+}*/
+
+.container {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "main aside"
+        "footer footer";
+    grid-template-columns: auto 200px;
+    grid-gap: 8px;
+}
+
+#formInfo {
+    font-size: 14px;
+    font-style: italic;
+}
